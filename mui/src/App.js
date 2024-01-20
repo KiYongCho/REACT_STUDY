@@ -19,7 +19,7 @@ export default function App() {
   
   const [count, setCount] = useState(0);
 
-  const ops = ['a', 'aa', 'aaa', 'b', 'bb', 'bbb'];
+  const ops = ['가', '가가', '가가가가가', '엄', '준식', '엄준식'];
 
   return (
     <div>
