@@ -1,0 +1,2 @@
+-- npx create-react-app 앱명
+-- 앱디렉토리에서 npm start
