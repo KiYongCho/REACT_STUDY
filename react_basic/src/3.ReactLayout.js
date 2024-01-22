@@ -5,12 +5,12 @@ import './css/3.ReactLayout.css';
 const contents = ['Javascript contents', 'Typescript contents', 'React contents'];
 
 export default function ReactLayout() {
-    const title = 'My React Website';
+    const titleText = 'My React Website';
     const menus = ['Javascript', 'Typescript', 'React'];
-    const footerText = 'Copyright © 2024 me';
+    const footerText = 'Copyright © 2024 All right reserved 이츠미';
     return (
         <div id='wrapper'>
-            <Header title={title} />
+            <Header titleText={titleText} />
             <Nav menus={menus} />
             <Content contents={contents[0]} />
             <Footer footerText={footerText} />
@@ -21,7 +21,7 @@ export default function ReactLayout() {
 function Header(props) {
     return (
         <header>
-            <h1>{props.title}</h1>
+            <h1>{props.titleText}</h1>
         </header>
     );
 }
@@ -49,8 +49,6 @@ function Content(props) {
 
 function Footer(props) {
     return (
-        <footer>
-            <p>{props.footerText}</p>
-        </footer>
+        <footer>{props.footerText}</footer>
     );
 }
