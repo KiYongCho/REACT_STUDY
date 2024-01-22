@@ -27,9 +27,6 @@ function Header(props) {
 }
 
 function Nav(props) {
-    function changeMenu(event) {
-        document.querySelector("#content").textContent = contents[event.target.dataset.index];
-    }    
     return (
         <nav>
             <ul>
@@ -39,6 +36,9 @@ function Nav(props) {
             </ul>
         </nav>
     );
+    function changeMenu(event) {
+        document.querySelector("#content").textContent = contents[event.target.dataset.index];
+    }    
 }
 
 function Content(props) {
