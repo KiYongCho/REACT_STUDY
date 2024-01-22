@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+Header {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+Nav {
+    text-align: center;
+    font-size: 1.2em;
+}
+Nav > ul > li {
+    display: inline;
+    margin-right: 50px;
+}
+Nav > ul > li > a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div#content {
+    padding: 20px;
+}
+
+Footer {
+    text-align: center;
+}

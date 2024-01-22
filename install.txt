@@ -1,2 +1,6 @@
--- npx create-react-app 앱명
+-- node 설치
+-- vscode 설치
+-- npx create-react-app . 또는 앱명
 -- 앱디렉토리에서 npm start
+-- (빌드) npm run build
+-- (빌드된것실행) npx serve -s build
