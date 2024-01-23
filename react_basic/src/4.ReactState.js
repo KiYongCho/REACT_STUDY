@@ -15,27 +15,46 @@ export default function ReactState() {
         'React Content... React is...'
     ];
     const [content, setContent] = useState(contentArr[0]);
-    const [race, setRace] = useState([0, 0, 0]);
+    const [num2, setNum2] = useState([0, 0, 0]);
+    let [data, setData] = useState('');
+
     return (
         <div>
             <h2>1. 카운터</h2>
             <p><button onClick={increaseCount}>클릭</button>&nbsp;<span id="counter"></span></p>
-            <h2>2. 구구단</h2>
+            <h2>2. State 연동</h2>
+            <p><button onClick={startNum2}>클릭</button></p>
+            <p>
+                <span data-key='0'>{num2[0]}</span>&nbsp;
+                <span data-key='1'>{num2[1]}</span>&nbsp;
+                <span data-key='2'>{num2[2]}</span>
+            </p>            
+            <h2>3. 구구단</h2>
             <p><button onClick={printGugudan}>클릭</button></p>
             <p><span id='gugudan'></span></p>
-            <h2>3. 컨텐츠변경 1</h2>
+            <h2>4. 컨텐츠변경</h2>
             <ul onClick={changeContent}>
                 <li data-key='0'>Javascript</li>
                 <li data-key='1'>Typescript</li>
                 <li data-key='2'>React</li>
             </ul>
             <p><span id='contents'>{content}</span></p>
+            <h2>5. 데이터가져오기</h2>
+            <p><button onClick={changeData}>전체데이터</button></p>
+            <p><span id='data'>{data}</span></p>            
         </div>
     );
     function increaseCount() {
         setCount(count + 1);
         document.querySelector("#counter").textContent = count;
     }
+    function startNum2(e) {
+        setNum2([
+            num2[0] = num2[0]+1, 
+            num2[1] = num2[0]+num2[1], 
+            num2[2] = num2[1]+num2[2]
+        ]);
+    }    
     function printGugudan() {
         let str = '';        
         while (num < 10) {
@@ -49,5 +68,11 @@ export default function ReactState() {
     }
     function changeContent(e) {
         setContent(contentArr[e.target.dataset.key]);
+    }
+    function changeData(e) {
+        let jsonStr;
+        fetch('https://jsonplaceholder.typicode.com/todos')
+        .then(response => response.json())
+        .then(result => setData(jsonStr = JSON.stringify(result)));
     }
 }
