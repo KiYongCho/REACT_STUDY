@@ -2,6 +2,7 @@
 // import ReactProps from './1.ReactProps';
 // import ReactEvents from './2.ReactEvents';
 // import ReactLayout from './3.ReactLayout';
+import ReactStyledComponent from './5.ReactStyledComponent';
 import ReactState from './4.ReactState';
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
     // <ReactProps />
     // <ReactEvents />
     // <ReactLayout />
-    <ReactState />
+    // <ReactState />
+    <ReactStyledComponent />
   );
 }
