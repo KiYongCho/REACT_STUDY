@@ -2,8 +2,10 @@
 // import ReactProps from './1.ReactProps';
 // import ReactEvents from './2.ReactEvents';
 // import ReactLayout from './3.ReactLayout';
-import ReactStyledComponent from './5.ReactStyledComponent';
-import ReactState from './4.ReactState';
+// import ReactState from './4.ReactState';
+//import ReactStyledComponent from './5.ReactStyledComponent';
+import ReactContextAPI from './6.ReactContextAPI';
+
 
 export default function App() {
   return (
@@ -12,6 +14,7 @@ export default function App() {
     // <ReactEvents />
     // <ReactLayout />
     // <ReactState />
-    <ReactStyledComponent />
+    // <ReactStyledComponent />
+    <ReactContextAPI />
   );
 }
