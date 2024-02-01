@@ -2,9 +2,10 @@
 // import ReactProps from './1.ReactProps';
 // import ReactEvents from './2.ReactEvents';
 // import ReactLayout from './3.ReactLayout';
-// import ReactState from './4.ReactState';
+// import ReactUseState from './4.ReactUseState';
 //import ReactStyledComponent from './5.ReactStyledComponent';
-import ReactContextAPI from './6.ReactContextAPI';
+// import ReactContextAPI from './6.ReactContextAPI';
+import ReactUseReducer from './7.ReactUseReducer';
 
 
 export default function App() {
@@ -13,8 +14,9 @@ export default function App() {
     // <ReactProps />
     // <ReactEvents />
     // <ReactLayout />
-    // <ReactState />
+    // <ReactUseState />
     // <ReactStyledComponent />
-    <ReactContextAPI />
+    // <ReactContextAPI />
+    <ReactUseReducer />
   );
 }

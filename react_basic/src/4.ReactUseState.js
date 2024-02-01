@@ -6,7 +6,7 @@
 
 import {useState} from 'react';
 
-export default function ReactState() {
+export default function ReactUseState() {
     const [count, setCount] = useState(0);
     let [num, setNum] = useState(2);
     const contentArr = [
