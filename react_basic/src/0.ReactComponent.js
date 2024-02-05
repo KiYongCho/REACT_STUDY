@@ -17,6 +17,7 @@ export default function ReactComponent() {
 }
 */
 
+
 // 2. class 문법
 import {Component} from 'react';
 export default class ReactComponent extends Component {
