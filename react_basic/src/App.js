@@ -3,9 +3,10 @@
 // import ReactEvents from './2.ReactEvents';
 // import ReactLayout from './3.ReactLayout';
 // import ReactUseState from './4.ReactUseState';
-//import ReactStyledComponent from './5.ReactStyledComponent';
+// import ReactStyledComponent from './5.ReactStyledComponent';
 // import ReactContextAPI from './6.ReactContextAPI';
-import ReactUseReducer from './7.ReactUseReducer';
+// import ReactUseReducer from './7.ReactUseReducer';
+import ReactRedux from './8-2.ReactRedux';
 
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
     // <ReactUseState />
     // <ReactStyledComponent />
     // <ReactContextAPI />
-    <ReactUseReducer />
+    // <ReactUseReducer />
+    <ReactRedux />
   );
 }

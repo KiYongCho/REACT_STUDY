@@ -1,0 +1,74 @@
+<!--
+[Redux]
+Redux강의영상 : https://www.youtube.com/playlist?list=PLuHgQVnccGMB-iGMgONoRPArZfjRuRNVc
+Redux는 상태관리를 위한 별도의 라이브러리이며 주로 Angular, Vue, React와 같은 JS UI프레임워크에서 상태관리를 위해 사용된다.
+Redux는 모든 상태를 하나의 객체로 관리한다. 이 객체를 스토어라고 부르며, 스토어에는 상태를 변경하는 함수(reducer)가 들어있다.
+Redux를 통해 상태관리를 하게 되면 상태변경을 일원화하여 관리할 수 있으며, 상태변경을 추적하기 쉽다.
+리액트에서 Redux를 사용하기 위해서는 react-redux라는 라이브러리를 사용한다. (npm install redux react-redux)
+Redux 관련용어
+  - state : 상태
+  - store : 상태를 저장하는 객체
+  - action : 상태를 변경하는 명령어
+  - reducer : 상태를 변경하는 함수
+  - dispatcher : 액션을 리듀서에 전달하고 subscribe를 호출하는 함수
+  - Provider : 리액트 앱에 스토어를 제공하는 컴포넌트
+  - subscribe : 상태가 변경될 때마다 실행되어 뷰를 갱신하는 함수
+  - selector : 상태를 조회하는 함수
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redux Counter</title>
+  </head>
+  <body>
+    <div>
+      <p>
+        Count : <span id="counter"> 0 </span>
+        <button id="increment"> + </button>
+        <button id="decrement"> - </button>
+      </p>
+    </div>
+    <script type="module">
+
+      import * as Redux from 'https://unpkg.com/redux@latest/dist/redux.browser.mjs'
+
+      // reducer
+      function reducer(state, action) {
+        if (typeof state === 'undefined') {
+          return 0;
+        }
+        switch (action.type) {
+          case 'INCREMENT':
+            return state + 1;
+          case 'DECREMENT':
+            return state - 1;
+          default:
+            return state;
+        }
+      }
+
+      // store
+      var store = Redux.createStore(reducer);
+
+      // rendering function
+      function render() {
+        document.getElementById('counter').innerHTML = store.getState().toString();
+      }
+
+      // subscribe
+      store.subscribe(render);
+
+      render();
+
+      document.getElementById('increment').addEventListener('click', function () {
+        // dispatcher
+          store.dispatch({ type: 'INCREMENT' });
+      })
+
+      document.getElementById('decrement').addEventListener('click', function () {
+        // dispatcher
+          store.dispatch({ type: 'DECREMENT' });
+      })
+  </script>
+  </body>
+</html>

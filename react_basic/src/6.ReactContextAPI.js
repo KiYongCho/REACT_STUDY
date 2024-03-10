@@ -7,10 +7,12 @@
 
 import { createContext, useContext } from "react";
 
-const context = createContext({
+const obj = {
     name: '홍길동',
     age: 20
-});
+}
+
+const context = createContext(obj);
 
 export default function ReactContextAPI() {
 
